@@ -13,8 +13,6 @@ public class Fill : MonoBehaviour
 
 	void Start ()
 	{
-		//gameObject.AddComponent<MeshFilter>();
-		//gameObject.AddComponent<MeshRenderer>();
 		mesh = GetComponent<MeshFilter>().mesh;
 
 		mesh.Clear();
