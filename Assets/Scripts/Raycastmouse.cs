@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Raycastmouse : MonoBehaviour {
 
+	public Camera camera;
 
-		void FixedUpdate()
-		{
-			Vector3 fwd = transform.TransformDirection(Vector3.forward);
+	void Update(){
+		RaycastHit hit;
+		Ray ray = camera.ScreenPointToRay(Input.mousePosition);
 
-			if (Physics.Raycast(transform.position, fwd, 10))
-				print("There is something in front of the object!");
+		if (Physics.Raycast(ray, out hit) && Input.GetKeyDown(KeyCode.Mouse0)) {
+			Debug.Log ("ObjectHit");
+
 		}
 	}
+}
