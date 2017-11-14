@@ -40,9 +40,6 @@ public class Fill : MonoBehaviour
 
 		mesh.vertices = vertexList.ToArray ();
 		mesh.triangles = triangleList.ToArray ();
-//		mesh.vertices = new Vector3[] {new Vector3(0, 0, 0), new Vector3(0, 1, 0), new Vector3(1, 1, 0)};
-//		mesh.uv = new Vector2[] {new Vector2(0, 0), new Vector2(0, 1), new Vector2(1, 1)};
-//		mesh.triangles =  new int[] {0, 1, 2};		
 	}
 
 	void CreateCircleVertices(List<Vector3> vertexList, float y, float r)
@@ -81,4 +78,7 @@ public class Fill : MonoBehaviour
 		CreateCircleVertices (vertexList, 0.0f, bottomRadius);
 		mesh.vertices = vertexList.ToArray ();
 	}
-}
+
+	}
+
+

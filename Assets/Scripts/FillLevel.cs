@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FillLevel : MonoBehaviour{
-	[Range(0.0f, 1.0f)] public float level = 1.0f;
+	[Range(0.0f, 1.0f)] public float level = 0.0f;
 	public Fill fill;
 
 	float topRadius;
