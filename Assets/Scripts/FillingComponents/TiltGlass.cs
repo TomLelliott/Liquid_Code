@@ -12,7 +12,6 @@ public class TiltGlass : MonoBehaviour
 		transform.rotation = Quaternion.Euler (0.0f, 0.0f, angle);
 	}
 	void OnCollisionEnter (Collision Hit){
-		Debug.Log (Hit.gameObject.name);
 		if (Hit.gameObject.CompareTag ("Liquid")) {
 			level.level += 0.01f;
 		}
