@@ -18,11 +18,11 @@ public class RightHand : MonoBehaviour {
 
 	void Update(){
 		RaycastHit hit;
-		Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+		Ray ray = camera.ScreenPointToRay (Input.mousePosition);
 
-		if (collider.Raycast(ray, out hit, 1) && Input.GetKeyDown(KeyCode.Mouse0)) {
+		if (collider.Raycast (ray, out hit, 1) && Input.GetKeyDown (KeyCode.Mouse0)) {
 			Holding = true;
-			Rb.isKinematic = true;
+			Rb.isKinematic = Rb.isKinematic;
 
 		}
 
@@ -43,11 +43,10 @@ public class RightHand : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Mouse0) && Holding) {
 			Holding = false;
-			Rb.isKinematic = false;
+			Rb.isKinematic = !Rb.isKinematic;
 		}
 
 		lastMousePosition = Input.mousePosition;
-	
-
 	}
+		
 }
