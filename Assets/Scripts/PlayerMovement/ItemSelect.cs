@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeftHand : MonoBehaviour {
+public class ItemSelect : MonoBehaviour {
+
 	new public Camera camera;
 	new Collider collider;
 	bool Holding = false;
@@ -17,11 +18,11 @@ public class LeftHand : MonoBehaviour {
 
 	void Update(){
 		RaycastHit hit;
-		Ray ray = camera.ScreenPointToRay (Input.mousePosition);
+		Ray ray = camera.ScreenPointToRay(Input.mousePosition);
 
-		if (collider.Raycast (ray, out hit, 1) && Input.GetKeyDown (KeyCode.Mouse1)) {
+		if (collider.Raycast(ray, out hit, 100) && Input.GetKeyDown(KeyCode.Mouse1)) {
 			Holding = true;
-			Rb.isKinematic = !Rb.isKinematic;
+			Rb.isKinematic = true;
 
 		}
 
@@ -40,12 +41,13 @@ public class LeftHand : MonoBehaviour {
 			transform.Rotate (Vector3.back * speed * Time.deltaTime);
 		}
 
-		if (Input.GetKeyDown (KeyCode.Mouse1) && Holding) {
+		if (Input.GetKeyDown (KeyCode.Mouse0) && Holding) {
 			Holding = false;
-			Rb.isKinematic = !Rb.isKinematic;
+			Rb.isKinematic = false;
 		}
 
 		lastMousePosition = Input.mousePosition;
+
 
 	}
 }

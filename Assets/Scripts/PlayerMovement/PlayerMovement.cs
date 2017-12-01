@@ -23,11 +23,11 @@ public class PlayerMovement : MonoBehaviour {
 		}	
 
 		if (Input.GetKey (KeyCode.UpArrow)) {
-			transform.localPosition = new Vector3 (posx, 0.3f, posz);
+			transform.localPosition = new Vector3 (posx, 30f, posz);
 		}
 
 		if (Input.GetKey (KeyCode.DownArrow)) {
-			transform.localPosition = new Vector3 (posx, -0.3f, posz);
+			transform.localPosition = new Vector3 (posx, 15f, posz);
 		}
 	}
 }
