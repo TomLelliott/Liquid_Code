@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 	float speed = 200;
 	float posx;
 	float posz;
+
 	// Use this for initialization
 	void Start () {
 		posx = transform.position.x;
@@ -22,12 +23,13 @@ public class PlayerMovement : MonoBehaviour {
 			transform.Rotate (Vector3.up * speed * Time.deltaTime);
 		}	
 
-		if (Input.GetKey (KeyCode.UpArrow)) {
-			transform.localPosition = new Vector3 (posx, 30f, posz);
+		if (Input.GetKey(KeyCode.C)) {
+			transform.localPosition = new Vector3 (posx, 3f, posz);
 		}
-
-		if (Input.GetKey (KeyCode.DownArrow)) {
-			transform.localPosition = new Vector3 (posx, 15f, posz);
+			else {
+			transform.localPosition = new Vector3 (posx, 6f, posz);
+		
 		}
+	
 	}
 }

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PauseGame : MonoBehaviour {
 
+	public GameObject Pause;
+
 	void Start() {
-		Time.timeScale = 0;
+		Time.timeScale = 1;
 	}
 	// Update is called once per frame
 	void Update () {
@@ -16,5 +18,12 @@ public class PauseGame : MonoBehaviour {
 			else
 				Time.timeScale = 1;
 		}
+		if (Time.timeScale == 0) {
+			Pause.SetActive (true);
+		}
+		else
+			Pause.SetActive (false); 
+		
+			}
 	}
-}
+
