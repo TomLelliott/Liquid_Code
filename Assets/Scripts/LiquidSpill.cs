@@ -12,7 +12,6 @@ public class LiquidSpill : MonoBehaviour {
 	void OnTriggerEnter (Collider col)
 	{
 		if (col.gameObject.CompareTag ("Liquid")) {
-			Debug.Log ("hola");
 			spilt.GetComponent<spillagebar> ().SpiltLiquid();
 		}
 

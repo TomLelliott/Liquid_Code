@@ -26,8 +26,8 @@ GameObject:
   - component: {fileID: 54080347918734748}
   - component: {fileID: 114451391802162050}
   m_Layer: 0
-  m_Name: Liquid
-  m_TagString: Liquid
+  m_Name: Beer
+  m_TagString: Beer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 1093590500880700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 31, y: 24.5, z: -15.5}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.2696475, y: 0.2696475, z: 0.2696475}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
