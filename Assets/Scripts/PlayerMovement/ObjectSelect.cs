@@ -13,13 +13,17 @@ public class ObjectSelect : MonoBehaviour {
 	void Update () {
 		RaycastHit hit;
 		Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+
 		if (Physics.Raycast(ray, out hit, 10) && Input.GetKeyDown(KeyCode.Mouse1)) {
-			Debug.Log (hit.collider.name);
 			ItemSelect selection = hit.collider.GetComponent<ItemSelect> ();
+
 			if (selection != null) {
 				selection.hold (transform);
 			}
 
+			if (CompareTag ("Glass")) {
+				
+			}
 		}
 	}
 }

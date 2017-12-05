@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114451391802162050}
   m_Layer: 0
   m_Name: Liquid
-  m_TagString: Liquid
+  m_TagString: Wine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

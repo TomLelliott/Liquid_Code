@@ -7,7 +7,7 @@ public class ItemSelect : MonoBehaviour {
 	new Collider collider;
 	bool Holding = false;
 	Vector3 lastMousePosition;
-	float speed = 100;
+	float speed = 500;
 	private Rigidbody Rb;
 
 	void Start()
