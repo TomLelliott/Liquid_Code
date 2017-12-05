@@ -9,6 +9,7 @@ TagManager:
   - Beer
   - Glass
   - Trigger
+  - Wine
   layers:
   - Default
   - TransparentFX
