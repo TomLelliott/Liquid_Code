@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ItemSelect : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class ItemSelect : MonoBehaviour {
 	Vector3 lastMousePosition;
 	float speed = 500;
 	private Rigidbody Rb;
+//	public float count = 0;
 
 	void Start()
 	{
@@ -21,9 +23,16 @@ public class ItemSelect : MonoBehaviour {
 		Rb.isKinematic = true;
 		transform.parent = parent;
 		transform.rotation = Quaternion.LookRotation (transform.forward, Vector3.up);
+
 	}
 	void Update(){
+	//	if (Holding == true) {
+		//	count += 1;
+		//}
 
+		//if (count >= 100){
+		//	SceneManager.LoadScene ("Tutorial");
+	//	}
 
 		if (Holding) {
 			Vector3 mouseMove = Input.mousePosition - lastMousePosition;

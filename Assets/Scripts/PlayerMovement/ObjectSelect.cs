@@ -20,10 +20,7 @@ public class ObjectSelect : MonoBehaviour {
 			if (selection != null) {
 				selection.hold (transform);
 			}
-
-			if (CompareTag ("Glass")) {
 				
-			}
 		}
 	}
 }
