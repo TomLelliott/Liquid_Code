@@ -38,9 +38,10 @@ GameObject:
   - component: {fileID: 54028621771840274}
   - component: {fileID: 64169976370606550}
   - component: {fileID: 114968159936033600}
+  - component: {fileID: 114018266394108708}
   m_Layer: 0
-  m_Name: WhiteWineBottle
-  m_TagString: Untagged
+  m_Name: White Wine
+  m_TagString: Bottle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1602764340102702}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.99, y: 0.4, z: -3.43}
+  m_LocalPosition: {x: 459.30405, y: 320.63873, z: -661.87695}
   m_LocalScale: {x: 0.02, y: 0.017, z: 0.02}
   m_Children:
   - {fileID: 4937085704414152}
@@ -117,7 +118,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ba46b6ce85866d442b966b7687254953, type: 2}
+  - {fileID: 2100000, guid: dc7897e4c7c90e942a6bde32800eafbd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -173,6 +174,18 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 2c02cc5acb10a1d46ab3c0de1301ac7b, type: 3}
+--- !u!114 &114018266394108708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1602764340102702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b843c4d95b7d4cecba1de9e3bd8ecd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glass: {fileID: 0}
 --- !u!114 &114464388014628428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01420ca58c4d7c149ac5bdca05f94507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Liquid: {fileID: 1093590500880700, guid: 91c2276d96c44dc4fba8cb8b82932ac3, type: 2}
+  Liquid: {fileID: 1093590500880700, guid: 2e94bb5b6526af14b895f061f3f5d881, type: 2}
 --- !u!114 &114968159936033600
 MonoBehaviour:
   m_ObjectHideFlags: 1

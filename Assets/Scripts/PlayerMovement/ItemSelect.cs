@@ -24,6 +24,13 @@ public class ItemSelect : MonoBehaviour {
 		transform.parent = parent;
 		transform.rotation = Quaternion.LookRotation (transform.forward, Vector3.up);
 
+		if (Rb.CompareTag("Bottle")) {
+			DrinksArray.currentBottle = name;
+			print ("Bottle:" + name);
+	
+		}
+
+
 	}
 	void Update(){
 	//	if (Holding == true) {

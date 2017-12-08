@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DrinksArray : MonoBehaviour {
 	public Text myText;
+
+	public List<Ingredient> drinkIngredients;
 	public string[] Drinks =
 	{
 		"Red Wine",
@@ -17,12 +19,15 @@ public class DrinksArray : MonoBehaviour {
 		"Vodka and Coke",
 		"Vodka and Lemonade"
 	};
+	public static string currentBottle;
+
+	public string theDrink;
 
 		
 	// Use this for initialization
-	void Start () {
-		string myString = Drinks[Random.Range(0, Drinks.Length)];
-		myText.text = myString;
+	void Start () { 
+		theDrink = Drinks[Random.Range(0, Drinks.Length)];
+		myText.text = theDrink;
 
 	}
 	

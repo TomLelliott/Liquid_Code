@@ -13,11 +13,21 @@ public class Glass : MonoBehaviour
 
     public void AddIngredient(string ingredient)
     {
-        contents.Add(ingredient);
+		if (!contents.Contains(ingredient)) {
+			contents.Add(ingredient);
+		}
+       
     }
 
     public void Empty()
     {
         contents.Clear();
     }
+
+	void OnTriggerEnter(Collider col){
+		print ("colliding");
+		if(col.gameObject.CompareTag("Liquid")){
+			AddIngredient (DrinksArray.currentBottle);
+		}
+	}
 }

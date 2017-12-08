@@ -7,18 +7,23 @@ public class spillagebar : MonoBehaviour {
 
 	float MaxSpill=100;
 	public float CurrentSpill;
+	public GameObject Restart;
 
 	// Use this for initialization
 
 	void Start () {
 	
 		CurrentSpill = 0;
+		Restart.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {		
-	if (CurrentSpill>=100f) {
-			SceneManager.LoadScene ("Restart");
+		if (CurrentSpill >= 100f) {
+			Restart.SetActive (true);
+		}
+		else {
+			Restart.SetActive (false);
 		}
 	}
 

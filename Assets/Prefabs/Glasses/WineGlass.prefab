@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 54086777315903442}
   - component: {fileID: 64035984277460530}
   - component: {fileID: 114092683706294526}
+  - component: {fileID: 114957908307143410}
   m_Layer: 0
   m_Name: WineGlass
   m_TagString: Glass
@@ -155,3 +156,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Wine: {fileID: 0}
+--- !u!114 &114957908307143410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1722788867221630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09b1b32637466af40a6fb597ba8751d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
