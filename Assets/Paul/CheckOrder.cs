@@ -5,13 +5,13 @@ using UnityEngine;
 public class CheckOrder : MonoBehaviour
 {
     public Glass glass;
-    public Order order;
+	bool tip=false;
 
     public void Check()
     {
 		DrinksArray drinks = GetComponent <DrinksArray> ();
 		string theDrink = drinks.theDrink;
-        bool tip = true;
+       tip = true;
         foreach (string ingredient in glass.contents)
         {
 			if (!theDrink.Contains(ingredient))
@@ -38,8 +38,6 @@ public class CheckOrder : MonoBehaviour
         {
             Debug.Log("No tip!");
         }
-
-       //order.RandomOrder();
-        //glass.Empty();
+        glass.Empty();
     }
 }

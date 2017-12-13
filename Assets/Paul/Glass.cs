@@ -5,6 +5,7 @@ using UnityEngine;
 public class Glass : MonoBehaviour
 {
     public List<string> contents = new List<string>();
+	public CheckOrder Manager;
 
     void Awake()
     {

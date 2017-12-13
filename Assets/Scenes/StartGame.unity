@@ -474,7 +474,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glass: {fileID: 1858950948}
-  order: {fileID: 0}
 --- !u!1001 &200990185
 Prefab:
   m_ObjectHideFlags: 0
@@ -884,7 +883,7 @@ GameObject:
   - component: {fileID: 332645399}
   - component: {fileID: 332645398}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ServeCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -901,7 +900,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c1f18a05786de4a8ad2caf377069c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mang: {fileID: 156363286}
+  Mang: {fileID: 0}
+  NewOrder: {fileID: 0}
 --- !u!65 &332645399
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5273,6 +5273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contents: []
+  Manager: {fileID: 0}
 --- !u!1001 &1860533035
 Prefab:
   m_ObjectHideFlags: 0
