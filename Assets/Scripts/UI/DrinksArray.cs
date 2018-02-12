@@ -23,9 +23,11 @@ public class DrinksArray : MonoBehaviour {
 
 	public string theDrink;
 
-		
+	void Start(){
+		RandomOrder ();
+	}
 	// Use this for initialization
-	void Start () { 
+	public void RandomOrder () { 
 		theDrink = Drinks[Random.Range(0, Drinks.Length)];
 		myText.text = theDrink;
 

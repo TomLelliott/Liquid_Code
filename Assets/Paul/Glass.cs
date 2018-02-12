@@ -26,7 +26,6 @@ public class Glass : MonoBehaviour
     }
 
 	void OnTriggerEnter(Collider col){
-		print ("colliding");
 		if(col.gameObject.CompareTag("Liquid")){
 			AddIngredient (DrinksArray.currentBottle);
 		}

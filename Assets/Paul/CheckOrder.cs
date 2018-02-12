@@ -6,8 +6,36 @@ public class CheckOrder : MonoBehaviour
 {
     public Glass glass;
 	bool tip=false;
+	public GameObject CorrectDrink;
+	public GameObject WrongDrink;
+	public float count = 0;
+	public DrinksArray NewOrder;
 
-    public void Check()
+	void Start(){
+		NewOrder = GameObject.FindObjectOfType<DrinksArray>();
+		CorrectDrink.SetActive (false);
+		WrongDrink.SetActive (false);
+	}
+
+	void Update(){
+		if (WrongDrink.activeInHierarchy) {
+			count += 1;
+		}
+
+		if (CorrectDrink.activeInHierarchy){
+			count += 1;
+		}
+
+		if(count >=100){
+			CorrectDrink.SetActive (false);
+			WrongDrink.SetActive (false);
+			count = 0;
+		}
+
+	
+	}
+
+	public void Check()
     {
 		DrinksArray drinks = GetComponent <DrinksArray> ();
 		string theDrink = drinks.theDrink;
@@ -21,22 +49,15 @@ public class CheckOrder : MonoBehaviour
             }
         }
 
-//        foreach (string ingredient in order.current.ingredients)
-//        {
-//            if (!glass.contents.Contains(ingredient))
-//            {
-//                tip = false;
-//                Debug.LogFormat("Missing ingredient {0}!", ingredient);
-//            }
-//        }
-
         if (tip)
         {
-            Debug.Log("TIP!");
+			CorrectDrink.SetActive (true);
+			NewOrder.GetComponent<DrinksArray> ().RandomOrder();
         }
         else
         {
-            Debug.Log("No tip!");
+			WrongDrink.SetActive (true);
+			NewOrder.GetComponent<DrinksArray> ().RandomOrder();
         }
         glass.Empty();
     }

@@ -10,7 +10,6 @@ public class ItemSelect : MonoBehaviour {
 	Vector3 lastMousePosition;
 	float speed = 500;
 	private Rigidbody Rb;
-//	public float count = 0;
 
 	void Start()
 	{
@@ -26,20 +25,13 @@ public class ItemSelect : MonoBehaviour {
 
 		if (Rb.CompareTag("Bottle")) {
 			DrinksArray.currentBottle = name;
-			print ("Bottle:" + name);
+
 	
 		}
 
 
 	}
 	void Update(){
-	//	if (Holding == true) {
-		//	count += 1;
-		//}
-
-		//if (count >= 100){
-		//	SceneManager.LoadScene ("Tutorial");
-	//	}
 
 		if (Holding) {
 			Vector3 mouseMove = Input.mousePosition - lastMousePosition;
