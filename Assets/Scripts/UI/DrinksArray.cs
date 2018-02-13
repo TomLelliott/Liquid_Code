@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DrinksArray : MonoBehaviour {
-	public Text myText;
+	public Text DrinkOrder;
 
 	public static string currentBottle;
 
@@ -18,7 +18,7 @@ public class DrinksArray : MonoBehaviour {
 	// Use this for initialization
 	public void RandomOrder () { 
 		theDrink = drinks[Random.Range(0, drinks.Count)];
-		myText.text = theDrink.name;
+		DrinkOrder.text = theDrink.name;
 
 	}
 

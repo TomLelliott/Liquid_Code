@@ -1,15 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CheckOrder : MonoBehaviour
 {
-    public Glass glass;
 	bool tip=false;
+
 	public GameObject CorrectDrink;
 	public GameObject WrongDrink;
-	public float count = 0;
+
 	public DrinksArray NewOrder;
+	public Glass glass;
+
+	public Text Points;
+	public Text Extra;
+	public Text Wrong;
+
+	public float count = 0;
+	public float Point = 0;
 
 	void Start(){
 		NewOrder = GameObject.FindObjectOfType<DrinksArray>();
@@ -61,7 +70,10 @@ public class CheckOrder : MonoBehaviour
         {
 			CorrectDrink.SetActive (true);
 			NewOrder.GetComponent<DrinksArray> ().RandomOrder();
-        }
+			Point += 1;
+			Points.text = Point.ToString();
+		}
+
         else
         {
 			WrongDrink.SetActive (true);
