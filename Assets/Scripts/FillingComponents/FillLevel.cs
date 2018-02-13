@@ -10,16 +10,11 @@ public class FillLevel : MonoBehaviour{
 	float bottomRadius;
 	float maxHeight;
 
-	float PosX;
-	float PosZ;
-
 	void Start()
 	{
 		topRadius = fill.topRadius;
 		bottomRadius = fill.bottomRadius;
 		maxHeight = fill.height;
-		PosX = transform.rotation.x;
-		PosZ = transform.rotation.z;
 	}
 
 	void Update ()

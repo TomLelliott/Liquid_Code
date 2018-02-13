@@ -29,5 +29,8 @@ public class Glass : MonoBehaviour
 		if(col.gameObject.CompareTag("Liquid")){
 			AddIngredient (DrinksArray.currentBottle);
 		}
+		if(col.gameObject.CompareTag("Beer")){
+			AddIngredient ("Beer");
+		}
 	}
 }

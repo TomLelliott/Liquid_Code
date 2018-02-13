@@ -31,23 +31,31 @@ public class CheckOrder : MonoBehaviour
 			WrongDrink.SetActive (false);
 			count = 0;
 		}
-
-	
+			
 	}
 
 	public void Check()
     {
 		DrinksArray drinks = GetComponent <DrinksArray> ();
-		string theDrink = drinks.theDrink;
+		Drink theDrink = drinks.theDrink;
        tip = true;
         foreach (string ingredient in glass.contents)
         {
-			if (!theDrink.Contains(ingredient))
+			if (!theDrink.ingredients.Contains(ingredient))
             {
                 tip = false;
-                Debug.LogFormat("Extra ingredient {0}!", ingredient);
+				Debug.LogFormat("Extra ingredient {0} in the glass!", ingredient);
             }
         }
+
+		foreach (var ingredient in theDrink.ingredients)
+		{
+			if (!glass.contents.Contains(ingredient))
+			{
+				tip = false;
+				Debug.LogFormat("Missing ingredient {0} in the glass!", ingredient);
+			}
+		}
 
         if (tip)
         {

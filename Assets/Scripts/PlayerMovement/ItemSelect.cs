@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class ItemSelect : MonoBehaviour {
 
-	new Collider collider;
 	bool Holding = false;
 	Vector3 lastMousePosition;
 	float speed = 500;
@@ -13,7 +12,6 @@ public class ItemSelect : MonoBehaviour {
 
 	void Start()
 	{
-		collider = GetComponent<Collider> ();
 		Rb = GetComponent<Rigidbody> ();
 	}
 
