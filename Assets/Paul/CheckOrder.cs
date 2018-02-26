@@ -19,6 +19,7 @@ public class CheckOrder : MonoBehaviour
 
 	public float count = 0;
 	public float Point = 0;
+	public float CountDownTimer = 30f;
 
 	void Start(){
 		NewOrder = GameObject.FindObjectOfType<DrinksArray>();
@@ -40,7 +41,9 @@ public class CheckOrder : MonoBehaviour
 			WrongDrink.SetActive (false);
 			count = 0;
 		}
-			
+
+		CountDownTimer -= Time.deltaTime;
+
 	}
 
 	public void Check()
@@ -78,6 +81,10 @@ public class CheckOrder : MonoBehaviour
         {
 			WrongDrink.SetActive (true);
 			NewOrder.GetComponent<DrinksArray> ().RandomOrder();
+			if (CountDownTimer < 0f) {
+				Point -= 1;
+				CountDownTimer = 30f;
+			}
         }
         glass.Empty();
     }

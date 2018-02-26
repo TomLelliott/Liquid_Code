@@ -28,7 +28,7 @@ public class spillagebar : MonoBehaviour {
 
 	public void SpiltLiquid (){
 		CurrentSpill +=0.5f;
-		transform.localScale = new Vector3 ( 0.5f, (CurrentSpill / MaxSpill), 0.5f);
+		transform.localScale = new Vector3 ( 1f, (CurrentSpill / MaxSpill), 0.5f);
 	}
 
 }
