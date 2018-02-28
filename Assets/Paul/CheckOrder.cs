@@ -19,7 +19,7 @@ public class CheckOrder : MonoBehaviour
 
 	public float count = 0;
 	public float Point = 0;
-	public float CountDownTimer = 30f;
+	public float CountDownTimer = 20f;
 
 	void Start(){
 		NewOrder = GameObject.FindObjectOfType<DrinksArray>();
@@ -51,12 +51,14 @@ public class CheckOrder : MonoBehaviour
 		DrinksArray drinks = GetComponent <DrinksArray> ();
 		Drink theDrink = drinks.theDrink;
        tip = true;
+		string listOfNotHere = "";
+		string Extra = "";
         foreach (string ingredient in glass.contents)
         {
 			if (!theDrink.ingredients.Contains(ingredient))
             {
                 tip = false;
-				Debug.LogFormat("Extra ingredient {0} in the glass!", ingredient);
+				Extra = Extra + ingredient + ", ";
             }
         }
 
@@ -65,7 +67,7 @@ public class CheckOrder : MonoBehaviour
 			if (!glass.contents.Contains(ingredient))
 			{
 				tip = false;
-				Debug.LogFormat("Missing ingredient {0} in the glass!", ingredient);
+				listOfNotHere = listOfNotHere + ingredient + ", ";
 			}
 		}
 
@@ -80,10 +82,18 @@ public class CheckOrder : MonoBehaviour
         else
         {
 			WrongDrink.SetActive (true);
+			if (listOfNotHere != "") {
+				WrongDrink.GetComponent<Text> ().text = WrongDrink.GetComponent<Text> ().text + "Missing ingredients " + listOfNotHere + " ";
+			}
+
+			if (Extra != "") {
+				WrongDrink.GetComponent<Text> ().text = WrongDrink.GetComponent<Text> ().text + "Extra ingredients " + Extra;
+			}
 			NewOrder.GetComponent<DrinksArray> ().RandomOrder();
-			if (CountDownTimer < 0f) {
+			if (CountDownTimer <= 0f) {
 				Point -= 1;
-				CountDownTimer = 30f;
+				Points.text = Point.ToString();
+				CountDownTimer = 20f;
 			}
         }
         glass.Empty();

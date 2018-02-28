@@ -23,6 +23,5 @@ public class Order : MonoBehaviour
     {
         current = drinks[Random.Range(0, drinks.Count)];
         text.text = current.name;
-		Debug.Log("Commo Te llamo");
     }
 }
