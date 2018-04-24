@@ -82,13 +82,17 @@ public class CheckOrder : MonoBehaviour
         else
         {
 			WrongDrink.SetActive (true);
-			if (listOfNotHere != "") {
-				WrongDrink.GetComponent<Text> ().text = WrongDrink.GetComponent<Text> ().text + "Missing ingredients " + listOfNotHere + " ";
+			string errors = "";
+			if (!string.IsNullOrEmpty(listOfNotHere)) {
+				errors += "Missing ingredients " + listOfNotHere;
 			}
-
-			if (Extra != "") {
-				WrongDrink.GetComponent<Text> ().text = WrongDrink.GetComponent<Text> ().text + "Extra ingredients " + Extra;
+			if (!string.IsNullOrEmpty(Extra)) {
+				if (!string.IsNullOrEmpty(errors)) {
+					errors += " ";
+				}
+				errors += "Extra ingredients " + Extra;
 			}
+			WrongDrink.GetComponent<Text> ().text = errors;
 			NewOrder.GetComponent<DrinksArray> ().RandomOrder();
 			if (CountDownTimer <= 0f) {
 				Point -= 1;
