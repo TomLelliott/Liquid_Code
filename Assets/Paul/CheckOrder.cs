@@ -94,8 +94,11 @@ public class CheckOrder : MonoBehaviour
 				Point -= 1;
 				Points.text = Point.ToString();
 				CountDownTimer = 20f;
+
 			}
-        }
-        glass.Empty();
+			glass.Empty();
+			Debug.Log ("Hi");
+		}
+     
     }
 }
